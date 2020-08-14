@@ -14,3 +14,32 @@ public :
 private : 
 	std::string name;
 };
+
+class PriorityCustomer : public Customer
+{
+public:
+	PriorityCustomer(const Customer& rhs);
+	PriorityCustomer& operator=(const Customer& rhs);
+
+};
+
+PriorityCustomer::PriorityCustomer(const Customer& rhs) : 
+	Customer(rhs)
+{
+	// 
+}
+
+PriorityCustomer& PriorityCustomer::operator=(const Customer& rhs)
+{
+	// 복사 대입 연산자의 경우
+	Customer::operator=(rhs);
+}
+
+Customer::Customer(const Customer& rhs)
+{
+}
+
+Customer& Customer::operator=(const Customer& rhs)
+{
+	// TODO: 여기에 return 문을 삽입합니다.
+}
