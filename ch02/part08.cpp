@@ -33,7 +33,7 @@ public :
 		}
 		catch (std::out_of_range& err)
 		{   // 2. 예외를 삼켜버린다. (이 경우는 로그만 남긴다.)
-			std::cerr << err.what() << std::endl;
+			std::cerr << err.what() << std::endl; 
 		}
 	}
 };
